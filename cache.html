@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html manifest="psfree_lapse.cache">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FCB Gaming Center | Offline Setup</title>
+  <style>
+    *{box-sizing:border-box}html,body{width:100%;height:100%;margin:0}
+    body{display:flex;align-items:center;justify-content:center;background:#070707 url('icon0.jpg') center/cover no-repeat;color:#fff;font-family:Arial,sans-serif;overflow:hidden}
+    body:before{content:"";position:fixed;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.94),rgba(32,21,0,.78))}
+    .card{position:relative;width:88%;max-width:650px;text-align:center;padding:38px;background:rgba(8,8,8,.78);border:1px solid rgba(255,194,34,.58);border-radius:22px;box-shadow:0 24px 70px rgba(0,0,0,.65)}
+    img{width:150px;height:150px;object-fit:cover;border-radius:27px;border:2px solid #f5bc20}
+    h1{margin:18px 0 9px;color:#ffd45f;font-size:32px}.sub{font-size:18px;color:#ddd;margin-bottom:22px}
+    #msgs{font-size:22px;min-height:31px}.phone{margin-top:22px;color:#ffd45f;font-size:18px;direction:ltr}
+  </style>
+  <script>
+    history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
+    function DLProgress(e){var p=e.total?Math.round(e.loaded/e.total*100):0;msgs.innerHTML='Installing Offline Cache... '+p+'%'}
+    function DisplayCacheProgress(){setTimeout(function(){msgs.innerHTML='Offline Cache Installed Successfully'},1800);setTimeout(function(){location.reload()},3000)}
+    window.applicationCache.addEventListener('progress',DLProgress,false);
+    window.applicationCache.oncached=DisplayCacheProgress;
+    window.applicationCache.onupdateready=DisplayCacheProgress;
+    window.applicationCache.onerror=function(){msgs.innerHTML='Cache failed. Check the connection and reload.'}
+  </script>
+</head>
+<body>
+  <section class="card">
+    <img src="fcb-logo.png" alt="FCB Gaming Center">
+    <h1>FCB Gaming Center</h1>
+    <div class="sub">PS4 Firmware 9.00</div>
+    <div id="msgs">Preparing Offline Cache...</div>
+    <div class="phone">01203930288</div>
+  </section>
+</body>
+</html>
