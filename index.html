@@ -1,55 +1,43 @@
-<!--
-PSFree is licensed under the GNU Affero General Public License v3 or later.
-FCB Gaming Center branding and presentation changes are separate from the
-upstream exploit code. See COPYING, LICENSE and README.md for attribution.
--->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl" manifest="selector.appcache">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>FCB Gaming Center | PS4 9.00</title>
+  <title>FCB Gaming Center | PS4 Host</title>
   <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{width:100%;height:100%}
-    body{background:#070707;color:#fff;font-family:Arial,sans-serif;overflow:hidden}
-    body:before{content:"";position:fixed;inset:-32px;background:#070707 url('fcb-logo.png') center/cover no-repeat;filter:blur(18px);transform:scale(1.08);opacity:.62}
-    body:after{content:"";position:fixed;inset:0;background:radial-gradient(circle at 50% 15%,rgba(255,190,0,.22),transparent 42%),linear-gradient(135deg,rgba(0,0,0,.9),rgba(18,12,0,.76));pointer-events:none}
-    @font-face{font-family:logging;src:url('fonts/LiberationMono-Regular.ttf')}
-    .shell{position:relative;z-index:2;height:100%;display:flex;align-items:center;justify-content:center;padding:26px}
-    .card{width:92%;max-width:760px;padding:28px 34px 30px;text-align:center;background:rgba(8,8,8,.72);border:1px solid rgba(255,194,34,.55);border-radius:22px;box-shadow:0 25px 80px rgba(0,0,0,.62),0 0 28px rgba(255,185,0,.16)}
-    .brand{display:flex;align-items:center;justify-content:center;gap:20px;margin-bottom:20px}
-    .brand img{width:116px;height:116px;object-fit:cover;border-radius:24px;border:2px solid #f5bc20;box-shadow:0 0 22px rgba(255,190,0,.34)}
-    .brand-copy{text-align:left}
-    h1{font-size:34px;letter-spacing:.8px;color:#ffd45f;text-shadow:0 2px 14px rgba(255,174,0,.22)}
-    .version{font-size:19px;margin-top:7px;color:#fff}
-    #console{height:270px;padding:19px;border-radius:13px;background:rgba(0,0,0,.72);border:1px solid rgba(255,255,255,.12);font:17px/1.42 logging,monospace;text-align:left;white-space:pre-wrap;overflow-y:auto;color:#f8f8f8}
-    .footer{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-top:17px;color:#d7d7d7;font-size:16px}
-    .phone{direction:ltr;color:#ffd45f;font-weight:bold;letter-spacing:1px}
-    @media(max-width:640px){.brand img{width:90px;height:90px}.brand-copy h1{font-size:26px}.card{padding:22px}.footer{font-size:14px}}
+    *{box-sizing:border-box}html,body{width:100%;height:100%;margin:0}
+    body{background:#080600;color:#fff;font-family:Arial,sans-serif;overflow:hidden}
+    body:before{content:"";position:fixed;inset:-35px;background:url('fcb-logo.png') center/cover no-repeat;filter:blur(20px);transform:scale(1.09);opacity:.58}
+    body:after{content:"";position:fixed;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.94),rgba(32,21,0,.78))}
+    main{position:relative;z-index:2;min-height:100%;display:flex;align-items:center;justify-content:center;padding:28px}
+    .panel{width:92%;max-width:850px;padding:30px;background:rgba(7,7,7,.82);border:1px solid rgba(255,194,34,.58);border-radius:24px;box-shadow:0 25px 80px rgba(0,0,0,.7)}
+    .brand{display:flex;direction:ltr;align-items:center;justify-content:center;gap:20px;margin-bottom:28px}
+    .brand img{width:112px;height:112px;object-fit:cover;border-radius:24px;border:2px solid #f5bc20;box-shadow:0 0 24px rgba(255,190,0,.3)}
+    h1{margin:0;color:#ffd45f;font-size:36px}.subtitle{margin-top:7px;color:#ddd;font-size:18px}
+    .choices{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    button{width:100%;min-height:145px;padding:22px;border:1px solid rgba(255,195,35,.48);border-radius:18px;background:linear-gradient(145deg,rgba(39,31,12,.96),rgba(10,10,10,.98));color:#fff;cursor:pointer;text-align:center}
+    button:focus,button:hover{outline:none;border-color:#ffd45f;box-shadow:0 0 25px rgba(255,190,0,.2);transform:translateY(-2px)}
+    .fw{display:block;color:#ffd45f;font-size:31px;font-weight:bold;margin-bottom:10px}.desc{font-size:17px;color:#dedede}
+    .hint{text-align:center;margin-top:22px;color:#aaa;font-size:15px}.phone{direction:ltr;display:inline-block;color:#ffd45f;font-weight:bold;margin-right:8px}
+    @media(max-width:680px){.choices{grid-template-columns:1fr}.brand img{width:88px;height:88px}h1{font-size:28px}.panel{padding:22px}}
   </style>
 </head>
 <body>
+  <main><section class="panel">
+    <div class="brand"><img src="fcb-logo.png" alt="FCB"><div><h1>FCB Gaming Center</h1><div class="subtitle">اختر إصدار نظام جهاز PlayStation 4</div></div></div>
+    <div class="choices">
+      <button type="button" onclick="selectHost('900')"><span class="fw">Firmware 9.00</span><span class="desc">PSFree + Lapse المستقر لإصدار 9.00</span></button>
+      <button type="button" onclick="selectHost('1300')"><span class="fw">Firmware 11–13</span><span class="desc">اختيار تلقائي لسلسلة التشغيل المتوافقة</span></button>
+    </div>
+    <div class="hint">سيتم حفظ اختيارك وتشغيل الهوست المناسب تلقائيًا في المرات القادمة &middot; <span class="phone">01203930288</span></div>
+  </section></main>
   <script>
-    if(window.applicationCache&&window.applicationCache.status===0){window.location.replace('cache.html')}
+    (function(){
+      var force=location.search.indexOf('choose=1')!==-1;
+      if(force){try{localStorage.removeItem('fcbFirmwareChoice')}catch(e){}return}
+      try{var saved=localStorage.getItem('fcbFirmwareChoice');if(saved==='900'||saved==='1300'){location.replace(saved+'/')}}catch(e){}
+    })();
+    function selectHost(version){try{localStorage.setItem('fcbFirmwareChoice',version)}catch(e){}location.href=version+'/'}
   </script>
-  <main class="shell">
-    <section class="card">
-      <div class="brand">
-        <img src="fcb-logo.png" alt="FCB Gaming Center">
-        <div class="brand-copy">
-          <h1>FCB Gaming Center</h1>
-          <div class="version">GoldHEN Host &mdash; PS4 Firmware 9.00</div>
-        </div>
-      </div>
-      <pre id="console">Preparing FCB host...</pre>
-      <div class="footer">
-        <span>Keep this page open until GoldHEN loads</span>
-        <span class="phone">01203930288</span>
-      </div>
-    </section>
-  </main>
-  <script src="payload.js"></script>
-  <script type="module" src="./alert.mjs"></script>
 </body>
 </html>
