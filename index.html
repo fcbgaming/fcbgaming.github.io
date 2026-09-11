@@ -26,6 +26,8 @@
   <main><section class="panel">
     <div class="brand"><img src="fcb-logo.png" alt="FCB"><div><h1>FCB Gaming Center</h1><div class="subtitle">اختر إصدار نظام جهاز PlayStation 4</div></div></div>
     <div class="choices">
+      <button type="button" onclick="selectHost('505')"><span class="fw">Firmware 5.05</span><span class="desc">GoldHEN Host مخصص لإصدار 5.05</span></button>
+      <button type="button" onclick="selectHost('672')"><span class="fw">Firmware 6.72</span><span class="desc">GoldHEN Host مخصص لإصدار 6.72</span></button>
       <button type="button" onclick="selectHost('900')"><span class="fw">Firmware 9.00</span><span class="desc">PSFree + Lapse المستقر لإصدار 9.00</span></button>
       <button type="button" onclick="selectHost('1300')"><span class="fw">Firmware 11–13</span><span class="desc">اختيار تلقائي لسلسلة التشغيل المتوافقة</span></button>
     </div>
@@ -35,7 +37,7 @@
     (function(){
       var force=location.search.indexOf('choose=1')!==-1;
       if(force){try{localStorage.removeItem('fcbFirmwareChoice')}catch(e){}return}
-      try{var saved=localStorage.getItem('fcbFirmwareChoice');if(saved==='900'||saved==='1300'){location.replace(saved+'/')}}catch(e){}
+      try{var saved=localStorage.getItem('fcbFirmwareChoice');if(saved==='505'||saved==='672'||saved==='900'||saved==='1300'){location.replace(saved+'/')}}catch(e){}
     })();
     function selectHost(version){try{localStorage.setItem('fcbFirmwareChoice',version)}catch(e){}location.href=version+'/'}
   </script>

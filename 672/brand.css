@@ -1,0 +1,11 @@
+*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0}
+body{background:#080600!important;color:#fff!important;font-family:Arial,sans-serif!important;overflow:hidden;padding:24px}
+body:before{content:"";position:fixed;z-index:0;inset:-32px;background:url('fcb-logo.png') center/cover no-repeat;filter:blur(18px);transform:scale(1.08);opacity:.58}
+body:after{content:"";position:fixed;z-index:0;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.93),rgba(28,18,0,.8));pointer-events:none}
+#brand,#console,#hostFooter{position:relative;z-index:2;width:92%;max-width:760px;margin-left:auto;margin-right:auto}
+#brand{display:flex;align-items:center;justify-content:center;gap:19px;margin-top:2vh;margin-bottom:18px;padding:22px 30px 0;background:rgba(8,8,8,.8);border:1px solid rgba(255,194,34,.58);border-bottom:0;border-radius:22px 22px 0 0}
+#brand img{width:108px;height:108px;object-fit:cover;border-radius:23px;border:2px solid #f5bc20;box-shadow:0 0 22px rgba(255,190,0,.34)}
+#brand h1{margin:0;color:#ffd45f;font-size:34px;letter-spacing:.5px}#brand p{margin:7px 0 0;font-size:18px;color:#fff}
+#console{height:300px;margin-top:0!important;padding:20px!important;background:rgba(0,0,0,.78)!important;border:1px solid rgba(255,194,34,.58)!important;border-top:0!important;border-radius:0!important;font:17px/1.42 monospace!important;overflow-y:auto}
+#hostFooter{display:flex;justify-content:space-between;gap:15px;padding:15px 22px;background:rgba(8,8,8,.82);border:1px solid rgba(255,194,34,.58);border-top:0;border-radius:0 0 22px 22px;color:#ccc;font-size:15px}
+#hostFooter a,.phone{color:#ffd45f;text-decoration:none}.phone{direction:ltr;font-weight:bold}
