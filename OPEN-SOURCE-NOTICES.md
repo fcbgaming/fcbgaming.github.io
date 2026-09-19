@@ -12,8 +12,8 @@ license and source notices.
 - `1300/`: rawgame4's MIT-licensed port work with third-party exclusions; its
   original `LICENSE` and `README.md` are included in that directory.
 - `1352/`: mirrored from https://github.com/raw13g/raw13g.github.io at commit
-  `401f6cc0c27d5ec69f56e7aa740158cd4189c41d`. Runtime files are unchanged,
-  including RAW GAME branding and embedded notices. This upstream snapshot
+  `401f6cc0c27d5ec69f56e7aa740158cd4189c41d`. HTML branding uses the FCB name and logo; upstream scripts and payloads
+  are unchanged, and embedded code notices are preserved. This upstream snapshot
   does not include a standalone license; no license or ownership is claimed
   by FCB Gaming Center for these files. See `1352/FCB-INTEGRATION.md`.
 
