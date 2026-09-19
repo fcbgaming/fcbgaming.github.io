@@ -6,7 +6,7 @@
   <title>FCB Gaming Center | PS4 Host</title>
   <style>
     *{box-sizing:border-box}html,body{width:100%;height:100%;margin:0}
-    body{background:#080600;color:#fff;font-family:Arial,sans-serif;overflow:hidden}
+    body{background:#080600;color:#fff;font-family:Arial,sans-serif;overflow-x:hidden;overflow-y:auto}
     body:before{content:"";position:fixed;inset:-35px;background:url('fcb-logo.png') center/cover no-repeat;filter:blur(20px);transform:scale(1.09);opacity:.58}
     body:after{content:"";position:fixed;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.94),rgba(32,21,0,.78))}
     main{position:relative;z-index:2;min-height:100%;display:flex;align-items:center;justify-content:center;padding:28px}
@@ -30,6 +30,7 @@
       <button type="button" onclick="selectHost('672')"><span class="fw">Firmware 6.72</span><span class="desc">GoldHEN Host مخصص لإصدار 6.72</span></button>
       <button type="button" onclick="selectHost('900')"><span class="fw">Firmware 9.00</span><span class="desc">PSFree + Lapse المستقر لإصدار 9.00</span></button>
       <button type="button" onclick="selectHost('1300')"><span class="fw">Firmware 11–13</span><span class="desc">اختيار تلقائي لسلسلة التشغيل المتوافقة</span></button>
+      <button type="button" onclick="selectHost('1352')"><span class="fw">Firmware 13.52</span><span class="desc">RAW GAME · PS4HEN لإصدار 13.52</span></button>
     </div>
     <div class="hint">سيتم حفظ اختيارك وتشغيل الهوست المناسب تلقائيًا في المرات القادمة &middot; <span class="phone">01203930288</span></div>
   </section></main>
@@ -37,7 +38,7 @@
     (function(){
       var force=location.search.indexOf('choose=1')!==-1;
       if(force){try{localStorage.removeItem('fcbFirmwareChoice')}catch(e){}return}
-      try{var saved=localStorage.getItem('fcbFirmwareChoice');if(saved==='505'||saved==='672'||saved==='900'||saved==='1300'){location.replace(saved+'/')}}catch(e){}
+      try{var saved=localStorage.getItem('fcbFirmwareChoice');if(saved==='505'||saved==='672'||saved==='900'||saved==='1300'||saved==='1352'){location.replace(saved+'/')}}catch(e){}
     })();
     function selectHost(version){try{localStorage.setItem('fcbFirmwareChoice',version)}catch(e){}location.href=version+'/'}
   </script>
